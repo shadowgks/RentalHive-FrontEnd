@@ -1,6 +1,6 @@
-import { Equipment } from './equipment/equipment';
+import { Equipment } from './equipment/interface/equipment';
 import { Component, OnInit } from '@angular/core';
-import { EquipmentService } from './equipment/equipment.service';
+import { EquipmentService } from './equipment/service/equipment.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
@@ -8,24 +8,6 @@ import { HttpErrorResponse } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent{
   title = 'Home';
-  public equipments!: Equipment[];
-  constructor(private equipmentService: EquipmentService){}
-
-  // ngOnInit(): void {
-
-  // }
-
-  public getEquipments(): void {
-    this.equipmentService.getEquipments().subscribe(
-      (response: Equipment[]) => {
-        this.equipments = response;
-      },
-      (error: HttpErrorResponse) => {
-        alert(error);
-      }
-    );
-  }
-
 }
