@@ -9,7 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { provideRouter } from '@angular/router';
 import configRoute from './routes.config';
-import { DashboardHomeComponent } from './dashboard.home/dashboard.home.component';
+import { DashboardHomeComponent } from './dashboard/home/home.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,13 @@ import { DashboardHomeComponent } from './dashboard.home/dashboard.home.componen
     EquipmentComponent,
     HomeComponent,
     NotFoundComponent,
-    DashboardHomeComponent
+    DashboardHomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     provideRouter(configRoute)

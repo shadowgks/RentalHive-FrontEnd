@@ -2,7 +2,7 @@ import { Routes } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { EquipmentComponent } from "./equipment/equipment.component";
 import { NotFoundComponent } from "./not-found/not-found.component";
-import { DashboardHomeComponent } from "./dashboard.home/dashboard.home.component";
+import { DashboardHomeComponent } from "./dashboard/home/home.component";
 
 const configRoute: Routes = [
     {
